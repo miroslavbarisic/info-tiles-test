@@ -1,12 +1,12 @@
-import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import FullScreenSpinner from '../components/spinners/FullScreenSpinner.jsx';
+import FullScreenSpinner from "../components/spinners/FullScreenSpinner.jsx";
 
-const Devices = lazy(() => import('../pages/devices/index.jsx'));
+const Devices = lazy(() => import("../pages/devices/index.jsx"));
 
-export const MainRouter = (props) => {
-  const menu = JSON.parse(localStorage.getItem('menu'));
+export const MainRouter = props => {
+  const menu = JSON.parse(localStorage.getItem("menu"));
 
   return (
     <Suspense fallback={<FullScreenSpinner />}>
